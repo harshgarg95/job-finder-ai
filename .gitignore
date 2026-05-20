@@ -1,0 +1,47 @@
+# Secrets
+.env
+
+# Local databases and state
+feedback.db
+scrutinizer.db
+seen_jobs.json
+
+# User data — never commit
+resume_cache.txt
+job_results*.csv
+test_run*.csv
+deep_search*.csv
+output*.csv
+
+# Logs
+*.log
+deep_search.log
+flask.log
+nohup.out
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Storage
+storage/
+*.csv

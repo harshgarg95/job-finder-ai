@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "updated": "2026-05-20",
+  "thresholds": {
+    "min_fit_score": 70,
+    "min_fit_score_incomplete_desc": 60,
+    "keyword_only_min_score": 50,
+    "domain_cap_weak": 50
+  },
+  "domain_configs": {
+    "tech_management": {
+      "strong_signals": [
+        "AI deployment",
+        "digital transformation",
+        "LLM",
+        "GenAI",
+        "enterprise AI",
+        "program management",
+        "implementation manager"
+      ],
+      "weak_signals": [
+        "financial crime compliance",
+        "EHR implementation",
+        "sales enablement CRM",
+        "AML KYC",
+        "regulatory compliance"
+      ],
+      "excluded_title_keywords": [
+        "software engineer",
+        "developer",
+        "programmer",
+        " l1",
+        " l2",
+        " l3",
+        "designer",
+        "data scientist"
+      ]
+    },
+    "developer": {
+      "strong_signals": [
+        "Python",
+        "backend",
+        "API",
+        "system design"
+      ],
+      "weak_signals": [
+        "sales manager",
+        "compliance officer"
+      ],
+      "excluded_title_keywords": [
+        "area sales",
+        "loan officer",
+        "underwriting"
+      ]
+    },
+    "finance": {
+      "strong_signals": [
+        "DCF",
+        "equity research",
+        "portfolio",
+        "M&A",
+        "valuation"
+      ],
+      "weak_signals": [
+        "software development",
+        "DevOps"
+      ],
+      "excluded_title_keywords": [
+        "software engineer",
+        "programmer",
+        "DevOps"
+      ]
+    }
+  },
+  "changelog": [
+    {
+      "version": 1,
+      "date": "2026-05-20",
+      "note": "Initial config — thresholds set from first 9 scrutinizer runs"
+    }
+  ]
+}
