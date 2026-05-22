@@ -20,6 +20,10 @@ flask.log
 nohup.out
 logs/
 
+# Dev backup files
+index_old.html
+index_BACKUP.html
+
 # Python
 __pycache__/
 *.pyc
