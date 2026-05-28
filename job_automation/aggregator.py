@@ -343,7 +343,7 @@ _CLEAN_FIELDS = [
     "score", "title", "company", "location", "location_type",
     "source", "posted", "freshness_label",
     "url", "description", "description_quality", "description_word_count",
-    "description_quality_note", "scored_by", "role_mismatch_reason",
+    "description_quality_note", "scored_by", "score_reason", "role_mismatch_reason",
     "domain_match", "risk_flags",
     "salary_min_lpa", "salary_max_lpa", "salary_label", "salary_fit",
 ]
@@ -381,6 +381,9 @@ def _clean_job_dict(job: dict) -> dict:
     cleaned = {f: job.get(f, "") for f in _CLEAN_FIELDS}
     if cleaned["score"] == "":
         cleaned["score"] = 0
+    # risk_flags must always be a list, never an empty string
+    if not isinstance(cleaned.get("risk_flags"), list):
+        cleaned["risk_flags"] = ["clear"]
     desc = str(cleaned.get("description") or "")
     cleaned["description"] = desc[:2000]
     return cleaned
